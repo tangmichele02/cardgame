@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+img {
+    width: 300px;
+}
+
+.container {
+display: flex;
+justify-content: center;
+padding-bottom: 300px;
+}
+
+.flip-card {
+perspective: 1000px;
+width: 200px;
+height: 150px;
+position: relative;
+transform-style: preserve-3d;
+transition: transform 0.5s;
+}
+
+.flip-card.flipped {
+transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+width: 100%;
+height: 100%;
+margin-top: 160px;
+position: absolute;
+backface-visibility: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.flip-card-front {
+justify-content: center;
+}
+
+.flip-card-back {
+justify-content: center;
+transform: rotateY(180deg);
+}
+
+.card-content {
+padding: 20px;
+text-align: center;
+border: 10px;
+}
